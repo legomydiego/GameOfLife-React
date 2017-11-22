@@ -8,15 +8,17 @@ class App extends Component {
     super(props)
 
     this.state = {
-      grid: [[true, true, false],[false, false, false], [true, true, true]]
+      grid: []
     }
+    this.constructGrid= this.constructGrid.bind(this);
+    this.constructGrid();
   }
 
   render() {
     var boxes = [];
-    for(var i = 0; i < 3; i++)
+    for(var i = 0; i < 10; i++)
     {
-      for(var j = 0; j < 3; j++)
+      for(var j = 0; j < 10; j++)
       {
         boxes.push(<Box isBlue={this.state.grid[i][j]}/>);
       }
@@ -28,6 +30,22 @@ class App extends Component {
         {boxes}
       </div>
     );
+  }
+
+  constructGrid(){
+    var tempGrid= []
+    for(var i = 0; i < 10; i++)
+    {
+      tempGrid[i]= [];
+      for(var j = 0; j < 10; j++)
+      {
+        tempGrid[i][j]=false;
+      }
+      tempGrid.push(<br />);
+    }
+    
+    this.setState({tempGrid})  
+
   }
 }
 
