@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.red {
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin: 2px;
+}
+
+.blue {
+  background-color: blue;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin: 2px;
+}
