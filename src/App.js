@@ -12,6 +12,7 @@ class App extends Component {
     }
     this.constructGrid= this.constructGrid.bind(this);
     this.constructGrid();
+    this.state.grid[5][5]=true;
   }
 
   render() {
@@ -44,7 +45,7 @@ class App extends Component {
       tempGrid.push(<br />);
     }
     
-    this.setState({tempGrid})  
+    this.state={grid:tempGrid}  
 
   }
 }
